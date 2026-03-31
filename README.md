@@ -61,11 +61,13 @@ That is the important headline.
 
 Here is the latest larger benchmark comparison:
 
-![TurboQuant Benchmark Comparison](assets/turboquant-benchmark-large.svg)
+<img width="600" height="308" alt="image" src="https://github.com/user-attachments/assets/672c8f89-072d-4cb7-8b5d-766c36afa4d5" />
+
 
 And here is the TurboQuant uplift over clean upstream:
 
-![TurboQuant Uplift Over Upstream](assets/turboquant-uplift-large.svg)
+<img width="563" height="283" alt="image" src="https://github.com/user-attachments/assets/c1bba0f9-6b7d-4d78-8ea4-8a0c8f8f70a9" />
+
 
 ## What The Graphs Say
 
