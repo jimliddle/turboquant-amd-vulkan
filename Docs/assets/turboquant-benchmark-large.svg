@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+  <style>
+    .title { font: 700 24px Arial, sans-serif; fill: #111827; }
+    .subtitle { font: 14px Arial, sans-serif; fill: #4b5563; }
+    .axis { font: 12px Arial, sans-serif; fill: #374151; }
+    .label { font: 11px Arial, sans-serif; fill: #111827; }
+    .legend { font: 12px Arial, sans-serif; fill: #111827; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+  </style>
+  <rect width="1200" height="640" fill="#ffffff"/>
+  <text x="40" y="36" class="title">TurboQuant Benchmark Comparison</text>
+  <text x="40" y="58" class="subtitle">AMD Vulkan, GPT-OSS 20B Q4_K_S GGUF, higher is better</text>
+
+  <line x1="80" y1="560" x2="1160" y2="560" stroke="#111827" stroke-width="1.5"/>
+  <line x1="80" y1="100" x2="80" y2="560" stroke="#111827" stroke-width="1.5"/>
+
+  <line x1="80" y1="503" x2="1160" y2="503" class="grid"/>
+  <line x1="80" y1="445" x2="1160" y2="445" class="grid"/>
+  <line x1="80" y1="388" x2="1160" y2="388" class="grid"/>
+  <line x1="80" y1="330" x2="1160" y2="330" class="grid"/>
+  <line x1="80" y1="273" x2="1160" y2="273" class="grid"/>
+  <line x1="80" y1="215" x2="1160" y2="215" class="grid"/>
+  <line x1="80" y1="158" x2="1160" y2="158" class="grid"/>
+  <line x1="80" y1="100" x2="1160" y2="100" class="grid"/>
+
+  <text x="48" y="564" class="axis">0</text>
+  <text x="36" y="507" class="axis">200</text>
+  <text x="36" y="449" class="axis">400</text>
+  <text x="36" y="392" class="axis">600</text>
+  <text x="36" y="334" class="axis">800</text>
+  <text x="28" y="277" class="axis">1000</text>
+  <text x="28" y="219" class="axis">1200</text>
+  <text x="28" y="162" class="axis">1400</text>
+  <text x="28" y="104" class="axis">1600</text>
+
+  <rect x="820" y="28" width="16" height="16" fill="#94a3b8"/>
+  <text x="842" y="41" class="legend">Upstream</text>
+  <rect x="930" y="28" width="16" height="16" fill="#60a5fa"/>
+  <text x="952" y="41" class="legend">Fork Baseline</text>
+  <rect x="1060" y="28" width="16" height="16" fill="#10b981"/>
+  <text x="1082" y="41" class="legend">Fork TurboQuant</text>
+
+  <rect x="108" y="539.72" width="18" height="20.28" fill="#94a3b8"/>
+  <rect x="130" y="538.91" width="18" height="21.09" fill="#60a5fa"/>
+  <rect x="152" y="534.87" width="18" height="25.13" fill="#10b981"/>
+  <text x="139" y="579" text-anchor="middle" class="label">tg128</text>
+
+  <rect x="258" y="134.72" width="18" height="425.28" fill="#94a3b8"/>
+  <rect x="280" y="121.27" width="18" height="438.73" fill="#60a5fa"/>
+  <rect x="302" y="109.69" width="18" height="450.31" fill="#10b981"/>
+  <text x="289" y="579" text-anchor="middle" class="label">pp512</text>
+
+  <rect x="408" y="475.93" width="18" height="84.07" fill="#94a3b8"/>
+  <rect x="430" y="475.93" width="18" height="84.07" fill="#60a5fa"/>
+  <rect x="452" y="456.99" width="18" height="103.01" fill="#10b981"/>
+  <text x="439" y="579" text-anchor="middle" class="label">pp512+tg128</text>
+
+  <rect x="558" y="369.22" width="18" height="190.78" fill="#94a3b8"/>
+  <rect x="580" y="369.85" width="18" height="190.15" fill="#60a5fa"/>
+  <rect x="602" y="337.61" width="18" height="222.39" fill="#10b981"/>
+  <text x="589" y="579" text-anchor="middle" class="label">pp2048+tg128</text>
+
+  <rect x="708" y="378.24" width="18" height="181.76" fill="#94a3b8"/>
+  <rect x="730" y="379.29" width="18" height="180.71" fill="#60a5fa"/>
+  <rect x="752" y="341.43" width="18" height="218.57" fill="#10b981"/>
+  <text x="739" y="579" text-anchor="middle" class="label">pp4096+tg256</text>
+
+  <rect x="858" y="480.95" width="18" height="79.05" fill="#94a3b8"/>
+  <rect x="880" y="479.87" width="18" height="80.13" fill="#60a5fa"/>
+  <rect x="902" y="459.75" width="18" height="100.25" fill="#10b981"/>
+  <text x="889" y="579" text-anchor="middle" class="label">pp4096+tg1024</text>
+
+  <rect x="1008" y="349.77" width="18" height="210.23" fill="#94a3b8"/>
+  <rect x="1030" y="347.16" width="18" height="212.84" fill="#60a5fa"/>
+  <rect x="1052" y="289.68" width="18" height="270.32" fill="#10b981"/>
+  <text x="1039" y="579" text-anchor="middle" class="label">pp8192+tg256</text>
+</svg>

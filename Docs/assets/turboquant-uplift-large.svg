@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560">
+  <style>
+    .title { font: 700 24px Arial, sans-serif; fill: #111827; }
+    .subtitle { font: 14px Arial, sans-serif; fill: #4b5563; }
+    .axis { font: 12px Arial, sans-serif; fill: #374151; }
+    .label { font: 12px Arial, sans-serif; fill: #111827; }
+    .value { font: 12px Arial, sans-serif; fill: #065f46; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+  </style>
+  <rect width="1100" height="560" fill="#ffffff"/>
+  <text x="40" y="36" class="title">TurboQuant Uplift Over Upstream</text>
+  <text x="40" y="58" class="subtitle">Percent throughput gain on the same AMD Vulkan machine</text>
+
+  <line x1="180" y1="480" x2="1000" y2="480" stroke="#111827" stroke-width="1.5"/>
+  <line x1="180" y1="100" x2="180" y2="480" stroke="#111827" stroke-width="1.5"/>
+
+  <line x1="180" y1="100" x2="180" y2="480" class="grid"/>
+  <line x1="344" y1="100" x2="344" y2="480" class="grid"/>
+  <line x1="508" y1="100" x2="508" y2="480" class="grid"/>
+  <line x1="672" y1="100" x2="672" y2="480" class="grid"/>
+  <line x1="836" y1="100" x2="836" y2="480" class="grid"/>
+  <line x1="1000" y1="100" x2="1000" y2="480" class="grid"/>
+
+  <text x="170" y="500" class="axis">0%</text>
+  <text x="326" y="500" class="axis">10%</text>
+  <text x="490" y="500" class="axis">20%</text>
+  <text x="654" y="500" class="axis">30%</text>
+  <text x="818" y="500" class="axis">40%</text>
+  <text x="982" y="500" class="axis">50%</text>
+
+  <text x="60" y="136" class="label">tg128</text>
+  <rect x="180" y="118" width="195.8" height="26" fill="#10b981"/>
+  <text x="383.8" y="136" class="value">+23.9%</text>
+
+  <text x="60" y="186" class="label">pp512</text>
+  <rect x="180" y="168" width="48.4" height="26" fill="#10b981"/>
+  <text x="236.4" y="186" class="value">+5.9%</text>
+
+  <text x="60" y="236" class="label">pp512+tg128</text>
+  <rect x="180" y="218" width="184.5" height="26" fill="#10b981"/>
+  <text x="372.5" y="236" class="value">+22.5%</text>
+
+  <text x="60" y="286" class="label">pp2048+tg128</text>
+  <rect x="180" y="268" width="136.1" height="26" fill="#10b981"/>
+  <text x="324.1" y="286" class="value">+16.6%</text>
+
+  <text x="60" y="336" class="label">pp4096+tg256</text>
+  <rect x="180" y="318" width="166.5" height="26" fill="#10b981"/>
+  <text x="354.5" y="336" class="value">+20.3%</text>
+
+  <text x="60" y="386" class="label">pp4096+tg1024</text>
+  <rect x="180" y="368" width="219.8" height="26" fill="#10b981"/>
+  <text x="407.8" y="386" class="value">+26.8%</text>
+
+  <text x="60" y="436" class="label">pp8192+tg256</text>
+  <rect x="180" y="418" width="234.5" height="26" fill="#10b981"/>
+  <text x="422.5" y="436" class="value">+28.6%</text>
+</svg>
