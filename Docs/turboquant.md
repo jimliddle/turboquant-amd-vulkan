@@ -33,7 +33,7 @@ Use the documents below as the main entry points:
 - `--kv-tq-qjl` / `--no-kv-tq-qjl`
 - `--kv-tq-fallback` / `--no-kv-tq-fallback`
 
-## Practical Summary
+## Summary
 
 The current state is beyond a prototype flag. On the validated AMD Vulkan setup used in this repository, the TurboQuant path is materially faster than both:
 
