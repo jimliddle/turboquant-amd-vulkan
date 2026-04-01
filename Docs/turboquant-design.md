@@ -144,7 +144,7 @@ Some work was intentionally not treated as done:
 
 The target here was proof on AMD hardware first, then cleanup and packaging.
 
-## Current Practical Outcome
+## Status
 
 The repository now contains:
 
