@@ -22,6 +22,31 @@ For large models, KV cache handling becomes a real performance cost.
 
 TurboQuant aims to reduce that cost by storing KV data in a much smaller form while still letting the model use it effectively.
 
+## What TurboQuant Does Not Fix
+
+TurboQuant is not a complete fix for every long-context slowdown.
+
+The most important limitation is prefill.
+
+Prefill means:
+
+- loading a long prompt
+- computing all the model work needed to turn that prompt into KV cache state
+
+TurboQuant helps with KV-cache efficiency, but it does not remove the fundamental compute cost of processing a very large prompt in the first place.
+
+That means two things can both be true:
+
+- TurboQuant can make long-context usage fit in memory more easily
+- very large prompt ingestion can still be too slow to feel practical on local hardware
+
+This is especially relevant for people who imagine "6x less KV memory" automatically means "6x bigger usable context." In practice, usable context is limited by both:
+
+- memory
+- speed
+
+TurboQuant helps strongly with the first and can help meaningfully with decode-side speed, but it does not by itself eliminate prefill bottlenecks.
+
 ## Why This Matters To A User
 
 If it works well, you can get:
@@ -79,7 +104,7 @@ The main pattern is straightforward:
 
 That is exactly where TurboQuant is expected to matter most, because that is where KV-cache handling becomes more important.
 
-## Why The Result Is Credible
+## About The Result
 
 This was not judged only against the fork's own baseline mode.
 
@@ -141,7 +166,7 @@ Likely improvement areas:
 - cleanup for upstream quality
   The code works and benchmarks well, but there is still a difference between "working research-grade fork" and "polished upstream-ready patch set."
 
-## Practical Bottom Line
+## Summary
 
 For a non-specialist, the takeaway is:
 
