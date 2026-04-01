@@ -75,6 +75,8 @@ Why the mixed tests matter:
 - generation-only tests show sustained decode speed
 - mixed prompt+generation tests are closer to normal real usage
 
+The below is only a high level summary, a full benchmark doc is in the docs section of the repository [here](https://github.com/jimliddle/turboquant-amd-vulkan/blob/main/Docs/turboquant-benchmarks.md).
+
 ## Current Result In Plain English
 
 On the AMD Vulkan machine used for validation, TurboQuant is now faster than both:
