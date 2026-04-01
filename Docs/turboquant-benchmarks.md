@@ -100,6 +100,25 @@ That is important because earlier benchmark passes were misleading: the compress
 - HIP has compile-validated backend support, but the benchmark proof in this repository is currently Vulkan-backed.
 - The current result is good enough to justify further investment, but it is still a forked implementation rather than a polished upstream-ready patch series.
 
+## What These Benchmarks Do Not Prove
+
+These results should not be read as "TurboQuant fixes every long-context problem."
+
+In particular, they do not prove that TurboQuant solves very large prompt-ingest or prefill bottlenecks on local hardware.
+
+That distinction matters:
+
+- TurboQuant directly targets KV-cache efficiency.
+- KV-cache efficiency often helps most in generation-heavy and mixed workloads.
+- Very large prompt evaluation can still be dominated by prefill compute, which TurboQuant does not magically remove.
+
+In other words:
+
+- if the main problem is decode or mixed prompt+generation throughput, TurboQuant can help a lot
+- if the main problem is extreme long-context prompt loading, TurboQuant may help memory fit but still leave prefill speed as the usability wall
+
+This is why future benchmark work should include context-growth curves in addition to fixed `pp` / `tg` points.
+
 ## Recommended Next Benchmark Work
 
 - Add a second model family so the result is not anchored to one GGUF.
@@ -116,3 +135,4 @@ The current benchmark lead is already strong, but there are still obvious places
 - validate and tune the HIP path on real ROCm hardware
 - add memory-footprint reporting so the tradeoff is visible in both speed and capacity terms
 - test more model families to find where TurboQuant gains are strongest and where they flatten out
+- add prompt-ingest scaling plots so we can show clearly where TurboQuant helps and where prefill remains the real bottleneck
